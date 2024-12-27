@@ -50,8 +50,6 @@ The pipeline comprises the following components:
 
 Docker is used to containerize all components of the project, ensuring seamless deployment and operation. A `docker-compose.yml` file is included to orchestrate services.
 
-![1 7](https://github.com/user-attachments/assets/0f6ac1ad-b0ea-4ee0-9c1b-e5da15debcb1)
-
 
 ### Benefits of Using Docker
 - **Environment Consistency**: All components run in isolated environments, avoiding dependency conflicts.
@@ -98,24 +96,8 @@ docker-compose down
 
 ---
 
-### Running the Application Locally (Optional)
-If you prefer to run the components without Docker, follow these steps:
+![docker](https://github.com/user-attachments/assets/8b2f8b1b-64a6-417e-a52d-ca885adc92f3)
 
-1. Start Kafka Server:
-   ```bash
-   zookeeper-server-start.sh config/zookeeper.properties
-   kafka-server-start.sh config/server.properties
-   ```
-2. Run the producer:
-   ```bash
-   python activity_producer.py
-   ```
-3. Run the consumer:
-   ```bash
-   python activity_consumer.py
-   ```
-
----
 
 
 ## Future Enhancements 🛠️
