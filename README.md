@@ -1,5 +1,5 @@
 
-# Real-Time Stock Price Monitoring and Analysis Pipeline 📈📊
+# Real-Time Stock Price Monitoring and Analysis Pipeline using Docker 📈📊
 
 This project demonstrates a real-time stock price monitoring pipeline built using Kafka, Python, and Docker. The system simulates stock price data generation, processes the data in real time, and provides insights into stock price movements. Docker is used to streamline deployment and ensure consistency across environments.
 
@@ -18,18 +18,23 @@ The pipeline comprises the following components:
 
 ## Components and Scripts 🛠️
 
-### 1. `activity_producer.py`
+### 1. `advanced_producer2.py`
 - **Purpose**: Generates real-time stock price data for multiple stocks and publishes the data to Kafka.
 - **Features**:
   - Simulates stock price data for companies like Apple, Microsoft, and Tesla.
   - Sends data to a Kafka topic named `activity_topic`.
   - Logs generated stock price data for tracking.
+    ![image](https://github.com/user-attachments/assets/290ab852-6648-4c74-892d-bde406c00ed7)
 
-### 2. `activity_consumer.py`
+
+### 2. `advanced_consumer2.py`
 - **Purpose**: Consumes real-time stock price data from Kafka, processes it, and displays key metrics.
 - **Features**:
   - Reads stock price data from `activity_topic`.
   - Logs details like stock name, price, and timestamp for analysis.
+![image](https://github.com/user-attachments/assets/1d68195a-13f2-48ab-ad19-88a1e8a4bf8f)
+
+
 
 ### 3. `realtime.py`
 - **Purpose**: Fetches external API data, performs statistical calculations, and visualizes trends.
@@ -38,11 +43,15 @@ The pipeline comprises the following components:
   - Computes mean, median, and standard deviation of prices.
   - Tracks price trends and visualizes data over time.
 
----
+![1 7](https://github.com/user-attachments/assets/9280641b-78c1-421f-b9ad-39bc863dc7ce)
+
 
 ## Dockerized Setup 🐳
 
 Docker is used to containerize all components of the project, ensuring seamless deployment and operation. A `docker-compose.yml` file is included to orchestrate services.
+
+![1 7](https://github.com/user-attachments/assets/0f6ac1ad-b0ea-4ee0-9c1b-e5da15debcb1)
+
 
 ### Benefits of Using Docker
 - **Environment Consistency**: All components run in isolated environments, avoiding dependency conflicts.
@@ -108,27 +117,7 @@ If you prefer to run the components without Docker, follow these steps:
 
 ---
 
-## Expected Outputs 📊
-
-- **Terminal Logs**:
-  - Real-time logs of stock price data sent and received.
-- **Statistical Insights**:
-  - Calculated metrics like mean, median, and price trends over time displayed in the terminal.
-- **Visualizations**:
-  - Potential for graphical representation of trends (if extended).
-
----
 
 ## Future Enhancements 🛠️
-- Integrate real-time data visualization using tools like Matplotlib or Dash.
 - Add advanced analytics such as moving averages, volatility measures, and correlation analysis.
 - Implement error handling and logging mechanisms for production-grade robustness.
-
----
-
-## License 📜
-This project is open-source under the MIT License. Contributions and forks are welcome!
-
----
-
-If you’d like me to refine this further or include details about a specific Docker setup (e.g., your `docker-compose.yml` file), let me know!
